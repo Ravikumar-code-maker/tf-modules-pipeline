@@ -14,3 +14,13 @@ variable "subnet_cidr" {
   type  = string
 }
 
+variable "firewall_rules" {
+  type     = list(object({
+    name   = string
+    network = string
+    allow   = list(object({ protocol:string, ports:list(string) }))
+    source_ranges = list(string)
+  }))
+}
+
+
