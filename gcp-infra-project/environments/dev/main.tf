@@ -33,6 +33,7 @@ module "compute" {
 
 module "storage" {
   source     = "../../modules/storage"
+  bucket_name = "sample-terraform-state-dev1"
   project_id = var.project_id
   env_name   = local.env_name
 }
@@ -56,6 +57,7 @@ module "apigateway" {
   project_id = var.project_id
   env_name   = local.env_name
 }
+
 
 
 
