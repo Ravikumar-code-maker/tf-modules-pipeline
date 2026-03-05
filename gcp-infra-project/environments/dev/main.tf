@@ -9,7 +9,7 @@ module "network" {
   region      = var.region
   subnet_cidr = var.subnet_cidr
 
-firewall_rules = [
+  firewall_rules = [
     {
       name  = "allow-ssh"
       ports = ["22"]
