@@ -18,3 +18,27 @@ module "compute" {
   machine_type = var.machine_type
   zone         = var.zone
 }
+
+module "storage" {
+  source       = "../../modules/storage"
+  project_id   = var.project_id
+  env_name     = local.env_name
+}
+
+module "iam" {
+  source      = "../../modules/iam"
+  project_id  = var.project_id
+  env_name    = local.env_name
+}
+
+module "bigquery" {
+  source      = "../../modules/bigquery"
+  project_id  = var.project_id
+  env_name    = local.env_name
+}
+
+mdoule "apigateway" {
+  source      = "../../modules/apigateway"
+  project_id  = var.project_id
+  env_name    = local.env_name
+}
