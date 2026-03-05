@@ -7,7 +7,7 @@ resource "google_bigquery-dataset" "dataset" {
 resource "google_bigquery_table" "table" {
   for_each = toset(var.tables)
 
-  table_id = each.key\
+  table_id = each.key
   dataset_id = google_bigquery_dataset.dataset.dataset_id
   project    = var.project_id
 
@@ -24,3 +24,4 @@ resource "google_bigquery_table" "table" {
     }
   ])
 }
+
