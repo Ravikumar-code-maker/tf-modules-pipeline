@@ -1,4 +1,4 @@
-local {
+locals {
   env_name = "dev"
 }
 
@@ -42,3 +42,4 @@ mdoule "apigateway" {
   project_id  = var.project_id
   env_name    = local.env_name
 }
+
