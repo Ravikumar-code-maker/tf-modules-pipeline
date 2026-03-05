@@ -8,7 +8,19 @@ module "network" {
   project_id  = var.project_id
   region      = var.region
   subnet_cidr = var.subnet_cidr
+
+firewall_rules = [
+    {
+      name  = "allow-ssh"
+      ports = ["22"]
+    },
+    {
+      name  = "allow-http"
+      ports = ["80"]
+    }
+  ]
 }
+
 
 module "compute" {
   source       = "../../modules/compute"
@@ -44,6 +56,7 @@ module "apigateway" {
   project_id = var.project_id
   env_name   = local.env_name
 }
+
 
 
 
