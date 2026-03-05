@@ -20,27 +20,27 @@ module "compute" {
 }
 
 module "storage" {
-  source       = "../../modules/storage"
-  project_id   = var.project_id
-  env_name     = local.env_name
+  source     = "../../modules/storage"
+  project_id = var.project_id
+  env_name   = local.env_name
 }
 
 module "iam" {
-  source      = "../../modules/iam"
-  project_id  = var.project_id
-  env_name    = local.env_name
+  source     = "../../modules/iam"
+  project_id = var.project_id
+  env_name   = local.env_name
 }
 
 module "bigquery" {
-  source      = "../../modules/bigquery"
-  project_id  = var.project_id
-  env_name    = local.env_name
+  source     = "../../modules/bigquery"
+  project_id = var.project_id
+  env_name   = local.env_name
 }
 
 module "apigateway" {
-  source      = "../../modules/apigateway"
-  project_id  = var.project_id
-  env_name    = local.env_name
+  source     = "../../modules/apigateway"
+  project_id = var.project_id
+  env_name   = local.env_name
 }
 
 
