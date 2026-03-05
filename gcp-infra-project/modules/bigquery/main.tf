@@ -16,7 +16,7 @@ resource "google_bigquery_table" "table" {
      name = "id",
      type = "STRING",
      mode = "REQUIRED"
-    }
+    },
     {
      name = "value",
      type = "STRING",
@@ -24,4 +24,5 @@ resource "google_bigquery_table" "table" {
     }
   ])
 }
+
 
