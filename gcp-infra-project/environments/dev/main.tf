@@ -36,6 +36,7 @@ module "storage" {
   bucket_name = "sample-terraform-state-dev1"
   project_id  = var.project_id
   env_name    = local.env_name
+  region      = var.region
 }
 
 module "iam" {
@@ -57,6 +58,7 @@ module "apigateway" {
   project_id = var.project_id
   env_name   = local.env_name
 }
+
 
 
 
