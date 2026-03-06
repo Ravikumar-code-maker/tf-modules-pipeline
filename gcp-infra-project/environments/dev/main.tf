@@ -61,6 +61,12 @@ module "bigquery" {
   env_name   = local.env_name
   region     = var.region
 
+
+  tables = [
+    "users",
+    "transactions",
+    "logs"
+  ]
 }
 
 module "apigateway" {
