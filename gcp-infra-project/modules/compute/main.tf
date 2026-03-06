@@ -4,7 +4,7 @@ resource "google_compute_instance" "vm" {
   zone         = var.zone
 
   boot_disk {
-    initial_params {
+    initialize_params {
       image = "debian-cloud/debian-11"
     }
   }

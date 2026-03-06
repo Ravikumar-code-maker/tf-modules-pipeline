@@ -1,24 +1,24 @@
 variable "env_name" {
-  type  = string
+  type = string
 }
 
 variable "project_id" {
-  type  = string
+  type = string
 }
 
 variable "region" {
-  type  = string
+  type = string
 }
 
 variable "subnet_cidr" {
-  type  = string
+  type = string
 }
 
 variable "firewall_rules" {
-  type      = list(object({
-    name    = string
-    network = string
-    allow   = list(object({ protocol : string, ports : list(string) }))
+  type = list(object({
+    name          = string
+    network       = string
+    allow         = list(object({ protocol : string, ports : list(string) }))
     source_ranges = list(string)
   }))
 }
