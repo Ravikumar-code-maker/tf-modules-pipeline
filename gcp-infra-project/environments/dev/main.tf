@@ -60,7 +60,7 @@ module "bigquery" {
   project_id = var.project_id
   env_name   = local.env_name
   location   = var.location # <- make sure var.location is defined in environments/dev/variables.tf
-
+  region     = var.region
 
   tables = [
     "users",
