@@ -9,29 +9,26 @@ module "network" {
   region      = var.region
   subnet_cidr = var.subnet_cidr
 
-  firewall_rules = [
-    {
-      name          = "allow-ssh"
-      network       = "dev-vpc"
-      source_ranges = ["0.0.0.0/0"]
-      allow = [{
-        protocol = "tcp"
-        ports    = ["22"]
-      }]
-    },
-    {
-      name          = "allow-http"
-      network       = "dev-vpc"
-      source_ranges = ["0.0.0.0/0"]
-      allow = [{
-        protocol = "tcp"
-        ports    = ["80"]
-      }]
-    }
-  ]
-}
 
-
+  firewall_rules = [{
+    name          = "allow-ssh"
+    network       = "dev-vpc"
+    source_ranges = ["0.0.0.0/0"]
+    allow = [{
+      protocol = "tcp"
+      ports    = ["22"]
+    }]
+  },
+  {
+    name          = "allow-http"
+    network       = "dev-vpc"
+    source_ranges = ["0.0.0.0/0"]
+    allow = [{
+      protocol = "tcp"
+      ports    = ["80"]
+    }]
+  }
+]
 module "compute" {
   source       = "../../modules/compute"
   env_name     = local.env_name

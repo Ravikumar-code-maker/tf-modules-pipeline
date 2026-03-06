@@ -1,6 +1,6 @@
 resource "google_service_account" "sa" {
   account_id   = "${var.env_name}-sa"
-  dispaly_name = "${var.env_name} service account"
+  display_name = "${var.env_name} service account"
   project      = var.project_id
 }
 

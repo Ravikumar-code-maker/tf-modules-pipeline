@@ -1,4 +1,4 @@
-resource "google_api_gateway_api" "api" {
+resource "google_beta_api_gateway_api" "api" {
   api_id = var.api_name
   project = var.project_id
 }

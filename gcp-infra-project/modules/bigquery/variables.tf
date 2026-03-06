@@ -5,3 +5,6 @@ variable "env_name" {
 variable "project_id" { type = string }
 variable "region" { type = string }
 
+variable "tables" {
+  type = list(string)
+}

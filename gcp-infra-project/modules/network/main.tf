@@ -1,5 +1,5 @@
 resource "google_compute_network" "vpc" {
-  name                    = "${var.emv_name}-vpc"
+  name                    = "${var.env_name}-vpc"
   auto_create_subnetworks = false
   project                 = var.project_id
 }

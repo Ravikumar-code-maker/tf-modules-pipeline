@@ -1,4 +1,4 @@
-resource "google_bigquery-dataset" "dataset" {
+resource "google_bigquery_dataset" "dataset" {
   dataset_id   = "${var.env_name}_dataset"
   project      = var.project_id
   location     = var.location
