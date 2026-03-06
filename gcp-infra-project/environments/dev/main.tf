@@ -57,6 +57,8 @@ module "apigateway" {
   source     = "../../modules/apigateway"
   project_id = var.project_id
   env_name   = local.env_name
+  region       = var.region
+
 }
 
 
