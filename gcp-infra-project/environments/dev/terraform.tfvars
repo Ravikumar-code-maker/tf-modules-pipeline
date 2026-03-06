@@ -3,5 +3,5 @@ region       = "us-central1"
 machine_type = "e2-medium"
 zone         = "us-central1-a"
 subnet_cidr  = "10.0.1.0/24"
-
+location     = "us-central1"
 

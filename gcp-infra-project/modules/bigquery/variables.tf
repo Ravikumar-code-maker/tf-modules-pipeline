@@ -5,6 +5,11 @@ variable "env_name" {
 variable "project_id" { type = string }
 variable "region" { type = string }
 
+variable "location" {
+  description = "The GCP region/location to deploy resources"
+  type        = string
+}
+
 variable "tables" {
   type = list(string)
 }
